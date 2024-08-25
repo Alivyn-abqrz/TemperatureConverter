@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meter Converter</title>
+</head>
+<body>
+  <h1>Meter Converter</h1>
+  <label for="meter">Meter:</label>
+  <input type="text" placeholder="Enter Meter" id="meter">
+  <button onclick="convTheLength();">Convert</button><br>
+  <br>
+  <label for="km">Kilometer:</label>
+  <input type="text"id="km" readonly>
+<br><br>
+  <label for="miles">Miles:</label>
+  <input type="text"id="miles" readonly>
+<br><br>
+<label for="ft">feet:</label>
+<input type="text" id="ft" readonly>
+
+<script>
+  function convTheLength(){
+    let meter = document.getElementById("meter").value;
+    let km = (meter)/1000;
+    document.getElementById("km").value=km;
+    let miles =(meter* 0.000621371);
+    document.getElementById("miles").value =miles;
+    let ft = (meter * 3.28084);
+    document.getElementById("ft").value=ft;
+  }
+</script>
+  
+</body>
+</html>
